@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Top level DayNight theme to be used in AndroidManifest.xml-->
+    <style name="Theme.MyApp" parent="Base.Theme.MyApp">
+        <!--Material color attributes (dark theme) -->
+        <!-- primary brand color-->
+        <item name="colorPrimary">@color/color_primary_dark</item>
+        <item name="colorOnPrimary">@color/color_on_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant_dark</item>
+        <!-- secondary brand color-->
+        <item name="colorSecondary">@color/color_secondary_dark</item>
+        <item name="colorOnSecondary">@color/color_on_secondary_dark</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant_dark</item>
+
+        <item name="colorSurface">@color/color_surface_dark</item>
+        <item name="colorOnSurface">@color/color_on_surface_dark</item>
+
+        <item name="android:colorBackground">@color/color_background_dark</item>
+        <item name="colorOnBackground">@color/color_on_background_dark</item>
+
+        <item name="colorError">@color/color_error_dark</item>
+        <item name="colorOnError">@color/color_on_error_dark</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+    </style>
+</resources>
