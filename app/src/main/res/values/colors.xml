@@ -32,10 +32,10 @@
     <color name="color_secondary_variant_light">#59214A</color>
     <color name="color_on_secondary_light">#ffffff</color>
 
-    <color name="color_background_light">#fafafa</color>
+    <color name="color_background_light">#ffffff</color>
     <color name="color_on_background_light">#212121</color>
 
-    <color name="color_surface_light">#ffffff</color>
+    <color name="color_surface_light">#fafafa</color>
     <color name="color_on_surface_light">#212121</color>
 
     <color name="color_error_light">#D50000</color>

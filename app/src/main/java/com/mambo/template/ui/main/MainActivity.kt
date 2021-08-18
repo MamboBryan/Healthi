@@ -11,14 +11,14 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.mambo.template.R
 import com.mambo.template.databinding.ActivityMainBinding
-import com.mambo.template.databinding.FragmentNewMealBinding
 import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
     private lateinit var navController: NavController
     private val viewModel by viewModels<MainViewModel>()
 
@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         navController = navHostFragment.navController
 
-//        when (viewModel.targetCalories) {
-//            -1 -> {
-//                navController.navigate(R.id.action_mainFragment_to_setupFragment)
-//            }
-//        }
+        when (viewModel.targetCalories) {
+            -1 -> {
+                navController.navigate(R.id.action_mainFragment_to_setupFragment)
+            }
+        }
     }
 
     override fun onResume() {
@@ -77,7 +77,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         }
 
     }
-
 
     private fun getDestinationId(): Int? {
         return navController.currentDestination?.id

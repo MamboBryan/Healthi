@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.mambo.template.ui.home.MainFragment"
+        android:name="com.mambo.template.ui.home.HomeFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main">
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_mainFragment_to_setupFragment"
             app:destination="@id/setupFragment"
@@ -18,12 +18,19 @@
         <action
             android:id="@+id/action_mainFragment_to_newMealFragment"
             app:destination="@id/newMealFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/setupFragment"
         android:name="com.mambo.template.ui.setup.SetupFragment"
         android:label="fragment_setup"
-        tools:layout="@layout/fragment_setup" />
+        tools:layout="@layout/fragment_setup" >
+        <action
+            android:id="@+id/action_setupFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/newMealFragment"
         android:name="com.mambo.template.ui.add.NewMealFragment"
@@ -34,4 +41,9 @@
         android:name="com.mambo.template.ui.edit.EditMealFragment"
         android:label="fragment_edit_meal"
         tools:layout="@layout/fragment_edit_meal" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.mambo.template.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_cloud_off_24.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.32916666666666666" />
         <entry key="app/src/main/res/layout/fragment_edit_meal.xml" value="0.28396739130434784" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.2694746376811594" />
         <entry key="app/src/main/res/layout/fragment_new_meal.xml" value="0.28396739130434784" />
         <entry key="app/src/main/res/layout/fragment_setup.xml" value="0.28396739130434784" />
+        <entry key="app/src/main/res/layout/layout_network_status.xml" value="0.32916666666666666" />
       </map>
     </option>
   </component>

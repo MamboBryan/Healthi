@@ -1,3 +1,3 @@
 # Healthi
 
-Simple caloie tracker app
+Simple calorie tracker app
