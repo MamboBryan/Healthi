@@ -2,6 +2,7 @@ package com.mambo.template.ui.main
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.mambo.template.data.repositories.NutritionixRepository
@@ -16,11 +17,12 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(
     application: Application,
-    preferenceManager: PreferenceManager,
-    private val nutritionixRepository: NutritionixRepository
+    val preferenceManager: PreferenceManager,
+    val nutritionixRepository: NutritionixRepository
 ) : AndroidViewModel(application) {
 
     val targetCalories = preferenceManager.getTargetCalories()
+    val isDarkThemeEnabled = preferenceManager.isDarkThemeEnabled()
 
     private val _connection = ConnectionLiveData(application)
     private val _settingsEventChannel = Channel<MainEvent>()
@@ -34,6 +36,10 @@ class MainViewModel @Inject constructor(
 
     init {
         loadSearchedFood()
+    }
+
+    fun isDarkModeEnabled(): Boolean {
+        return preferenceManager.isDarkThemeEnabled()
     }
 
     private fun loadSearchedFood() {

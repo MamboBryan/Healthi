@@ -6,6 +6,7 @@ import android.os.Looper
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        updateTheme()
         setContentView(binding.root)
 
         val navHostFragment =
@@ -80,5 +82,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun getDestinationId(): Int? {
         return navController.currentDestination?.id
+    }
+
+    fun updateTheme() {
+        val isEnabled = viewModel.isDarkModeEnabled()
+
+        AppCompatDelegate.setDefaultNightMode(
+            if (isEnabled)
+                AppCompatDelegate.MODE_NIGHT_YES
+            else
+                AppCompatDelegate.MODE_NIGHT_NO
+        )
     }
 }

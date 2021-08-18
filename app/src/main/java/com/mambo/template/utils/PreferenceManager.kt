@@ -9,6 +9,7 @@ class PreferenceManager @Inject constructor(
 
     companion object {
         const val TARGET_CALORIES = "target_calories"
+        const val DARK_THEME = "dark_theme"
     }
 
     fun getTargetCalories() = preference
@@ -17,6 +18,15 @@ class PreferenceManager @Inject constructor(
     fun setCalories(value: Int) {
         val editor = preference.edit()
         editor.putInt(TARGET_CALORIES, value)
+        editor.apply()
+    }
+
+    fun isDarkThemeEnabled() = preference
+        .getBoolean(DARK_THEME, true)
+
+    fun setDarkThemeEnabled(value: Boolean) {
+        val editor = preference.edit()
+        editor.putBoolean(DARK_THEME, value)
         editor.apply()
     }
 }
