@@ -27,9 +27,6 @@ class HomeViewModel @Inject constructor(
     private val today = Calendar.getInstance()
     val datePicked = MutableLiveData(today)
 
-    val day = MutableLiveData("Thursday")
-    val date = MutableLiveData("")
-
     init {
         getDate()
     }
