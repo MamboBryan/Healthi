@@ -79,7 +79,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
                         Snackbar.make(requireView(), event.message, Snackbar.LENGTH_SHORT).show()
                     }
                     is SettingsViewModel.SettingsEvent.UpdateDarkTheme -> {
-                        (activity as MainActivity?)?.updateTheme()
+//                        (activity as MainActivity?)?.updateTheme()
                     }
                 }
             }

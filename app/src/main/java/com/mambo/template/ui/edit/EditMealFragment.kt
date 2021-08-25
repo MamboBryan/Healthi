@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.mambo.template.R
 import com.mambo.template.databinding.FragmentEditMealBinding
-import com.mambo.template.databinding.FragmentNewMealBinding
 import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 

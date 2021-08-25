@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        updateTheme()
         setContentView(binding.root)
 
         val navHostFragment =
@@ -84,14 +83,4 @@ class MainActivity : AppCompatActivity() {
         return navController.currentDestination?.id
     }
 
-    fun updateTheme() {
-        val isEnabled = viewModel.isDarkModeEnabled()
-
-        AppCompatDelegate.setDefaultNightMode(
-            if (isEnabled)
-                AppCompatDelegate.MODE_NIGHT_YES
-            else
-                AppCompatDelegate.MODE_NIGHT_NO
-        )
-    }
 }

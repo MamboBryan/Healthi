@@ -2,6 +2,10 @@ package com.mambo.template.di
 
 import com.mambo.template.data.network.ApiService
 import com.mambo.template.data.repositories.NutritionixRepository
+import com.mambo.template.utils.Constants
+import com.mambo.template.utils.Constants.APP_ID
+import com.mambo.template.utils.Constants.APP_KEY
+import com.mambo.template.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,10 +21,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object ApiModule {
 
-    private const val BASE_URL = "https://trackapi.nutritionix.com/v2/"
-
-    private const val APP_ID = "c7210343"
-    private const val APP_KEY = "af31afdc438d445d36b00f7d57f36ee1"
 
     @Singleton
     @Provides
